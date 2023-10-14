@@ -13,6 +13,8 @@ RUN apt-get update &&\
     wget -O cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &&\
     dpkg -i cloudflared.deb &&\
     rm -f cloudflared.deb &&\
+    wget -O https://github.com/SagerNet/sing-box/releases/download/v1.5.3/sing-box_1.5.3_linux_amd64.deb &&\
+    dpkg -i sing-box_1.5.3_linux_amd64.deb &&\
     addgroup --gid 10001 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10001 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
